@@ -274,10 +274,7 @@ const AdminDash: React.FC = () => {
 					justifyContent: "flex-start",
 					width: "100vw",
 					minHeight: "100vh",
-					backgroundImage: "url('src/assets/untitled (26).png')",
-					backgroundSize: "cover",
-					backgroundPosition: "center",
-					backgroundRepeat: "no-repeat",
+					bgcolor: "lightgrey",
 					zIndex: -1,
 					padding: "2rem",
 				}}

@@ -154,7 +154,7 @@ const RegistrationForm: React.FC = () => {
 			>
 				<Box
 					component="img"
-					src="public/PSC_Logo.png"
+					src="images/PSC_logo.png"
 					alt="PSC Logo"
 					sx={{
 						height: 75,
@@ -172,7 +172,7 @@ const RegistrationForm: React.FC = () => {
 					left: 0,
 					width: "100vw",
 					height: "100vh",
-					backgroundImage: "url('/public/BGImg.png')",
+					backgroundImage: "url('images/BGImg.png')",
 					backgroundSize: "cover",
 					backgroundPosition: "center",
 					backgroundRepeat: "no-repeat",

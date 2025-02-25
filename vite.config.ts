@@ -12,7 +12,6 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	plugins: [react()],
 	build: {
-		outDir: "../dist", // Outputs to project/build/ instead of frontend/dist/
 		rollupOptions: {
 			output: {
 				entryFileNames: "assets/[name].js",

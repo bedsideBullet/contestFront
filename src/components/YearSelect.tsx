@@ -7,64 +7,16 @@ import {
 	SelectChangeEvent,
 } from "@mui/material";
 
-interface StateSelectProps {
+interface YearSelectProps {
 	value: string;
 	onChange: (value: string) => void;
 }
 
-const StateSelect: React.FC<StateSelectProps> = ({ value, onChange }) => {
-	const usStates = [
-		"Alabama",
-		"Alaska",
-		"Arizona",
-		"Arkansas",
-		"California",
-		"Colorado",
-		"Connecticut",
-		"Delaware",
-		"Florida",
-		"Georgia",
-		"Hawaii",
-		"Idaho",
-		"Illinois",
-		"Indiana",
-		"Iowa",
-		"Kansas",
-		"Kentucky",
-		"Louisiana",
-		"Maine",
-		"Maryland",
-		"Massachusetts",
-		"Michigan",
-		"Minnesota",
-		"Mississippi",
-		"Missouri",
-		"Montana",
-		"Nebraska",
-		"Nevada",
-		"New Hampshire",
-		"New Jersey",
-		"New Mexico",
-		"New York",
-		"North Carolina",
-		"North Dakota",
-		"Ohio",
-		"Oklahoma",
-		"Oregon",
-		"Pennsylvania",
-		"Rhode Island",
-		"South Carolina",
-		"South Dakota",
-		"Tennessee",
-		"Texas",
-		"Utah",
-		"Vermont",
-		"Virginia",
-		"Washington",
-		"West Virginia",
-		"Wisconsin",
-		"Wyoming",
-	];
+const YearSelect: React.FC<YearSelectProps> = ({ value, onChange }) => {
+	const years = Array.from(
+		{ length: 2025 - 1951 + 1 },
+		(_, index) => 1951 + index
+	);
 
 	const handleChange = (event: SelectChangeEvent<string>) => {
 		onChange(event.target.value);
@@ -72,18 +24,18 @@ const StateSelect: React.FC<StateSelectProps> = ({ value, onChange }) => {
 
 	return (
 		<FormControl fullWidth>
-			<InputLabel id="us-state-select-label">Select a State</InputLabel>
+			<InputLabel id="vehicle-year">Vehicle Year</InputLabel>
 			<Select
-				labelId="us-state-select-label"
-				id="us-state-select"
+				labelId="vehicle-year"
+				id="vehicle-year"
 				value={value}
-				label="Select a State"
+				label="Vehicle Year"
 				onChange={handleChange}
 				required
 			>
-				{usStates.map((state) => (
-					<MenuItem key={state} value={state}>
-						{state}
+				{years.map((year) => (
+					<MenuItem key={year} value={year}>
+						{year}
 					</MenuItem>
 				))}
 			</Select>
@@ -91,4 +43,4 @@ const StateSelect: React.FC<StateSelectProps> = ({ value, onChange }) => {
 	);
 };
 
-export default StateSelect;
+export default YearSelect;
